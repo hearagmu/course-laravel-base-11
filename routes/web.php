@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashBoard\PostController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -7,6 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('post', PostController::class);
 //para rutear un controlador hay que usarlo de ésta forma
 //indicando el nombre del controlador, dos puntos class coma entre comillas nombre de la funcion
 //Route::get('test', [PrimerControlador::class,'index']);
